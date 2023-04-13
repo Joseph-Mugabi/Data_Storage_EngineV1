@@ -16,7 +16,8 @@ classes = {"User": User, "Data": Data, "Settings": Settings}
 
 class DSEConsole(cmd.Cmd):
     """ DataStorageEngine console """
-    prompt = Style.BRIGHT + Fore.YELLOW + "DataStorageEngine:~ " +Style.RESET_ALL
+    prompt = Style.BRIGHT + Fore.YELLOW + "DataStorageEngine:~ " +
+    Style.RESET_ALL
 
     def do_EOF(self, arg):
         """Exits console"""
@@ -43,10 +44,10 @@ class DSEConsole(cmd.Cmd):
                 else:
                     try:
                         value = int(value)
-                    except:
+                    except Exception:
                         try:
                             value = float(value)
-                        except:
+                        except Exception:
                             continue
                 new_dict[key] = value
         return new_dict
@@ -137,12 +138,12 @@ class DSEConsole(cmd.Cmd):
                                 if args[2] in integers:
                                     try:
                                         args[3] = int(args[3])
-                                    except:
+                                    except Exception:
                                         args[3] = 0
                                 elif args[2] in floats:
                                     try:
                                         args[3] = float(args[3])
-                                    except:
+                                    except Exception:
                                         args[3] = 0.0
                             setattr(models.storage.all()[k], args[2], args[3])
                             models.storage.all()[k].save()
@@ -167,17 +168,18 @@ class DSEConsole(cmd.Cmd):
                     print(evalu)
                     break
             return
-        except  AttributeError:
+        except AttributeError:
             print("** invalid method **")
         except InstanceNotFoundError:
             print("** no instance found **")
         except TypeError as te:
-            fld = te.args[0].split()[-1].replace("_"," ")
+            fld = te.args[0].split()[-1].replace("_", " ")
             fld = fld.strip("'")
             print(f"** {fld} missing **")
         except Exception as e:
             print("** invalid syntax **")
             pass
+
 
 if __name__ == '__main__':
     DSEConsole().cmdloop()

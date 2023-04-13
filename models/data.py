@@ -5,6 +5,7 @@ import models
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String, Integer, ForeignKey, Text, text
 
+
 class Data(BaseModel, Base):
     """ representation of a data"""
     __tablename__ = 'datas'
