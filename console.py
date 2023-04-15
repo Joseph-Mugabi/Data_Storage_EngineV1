@@ -16,8 +16,7 @@ classes = {"User": User, "Data": Data, "Settings": Settings}
 
 class DSEConsole(cmd.Cmd):
     """ DataStorageEngine console """
-    prompt = Style.BRIGHT + Fore.YELLOW + "DataStorageEngine:~ " +
-    Style.RESET_ALL
+    prompt = Style.BRIGHT + Fore.YELLOW + "DataStorageEngine:~ " + Style.RESET_ALL
 
     def do_EOF(self, arg):
         """Exits console"""

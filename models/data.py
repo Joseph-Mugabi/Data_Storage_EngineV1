@@ -16,3 +16,7 @@ class Data(BaseModel, Base):
     def __init__(self, *args, **kwargs):
         """initialising the data"""
         super().__init__(*args, **kwargs)
+
+@classmethod
+def get(Data, data_id):
+    return session.query(Data).filter_by(id=data_id).first()
