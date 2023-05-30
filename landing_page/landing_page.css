@@ -6,7 +6,7 @@
   
   body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0000ff80;
+    background-color: #fff;
   }
   
   
@@ -108,7 +108,7 @@ button[type="button"] {
   
   img {
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   
   .container {
@@ -171,7 +171,7 @@ button[type="button"] {
   .cont {
     display: flex;
     align-items: center;
-    background-image: url("patients\ \(2\).png");
+    background-image: url("all-Users\ \(2\).jpg");
     background-size: contain;
     background-size: cover;
     background-position: 300px 10px;
@@ -183,8 +183,8 @@ button[type="button"] {
   }
   
   #img {
-    height: 400px;
-    width: 800px;
+    height: 300px;
+    width: 500px;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
     justify-content: space-around;
@@ -224,14 +224,14 @@ button[type="button"] {
   }
 
   #abt {
-    height: 950px;
-    width: 700px;
+    height: 900px;
+    width: 800px;
     display: block;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
     margin-left: -200px;
     position: absolute;
-    margin-top: 150px;
+    margin-top: 100px;
   }
   
   .card-info {

@@ -9,6 +9,7 @@ from models.engine import db_storage
 app = Flask(__name__)
 storage = db_storage.DB_Storage()
 
+strict_slashes=False
 @app.route('/users', methods=['GET'])
 def get_all_users():
     users = storage.all()
