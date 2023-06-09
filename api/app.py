@@ -12,7 +12,7 @@ storage = db_storage.DB_Storage()
 strict_slashes=False
 @app.route('/users', methods=['GET'])
 def get_all_users():
-    users = storage.all()
+    users = storage.all(User)
     return jsonify(users.to_dict)
 
 @app.route('/users/<string:id>', methods=['GET'])
