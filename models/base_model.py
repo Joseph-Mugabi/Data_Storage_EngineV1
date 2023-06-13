@@ -52,11 +52,15 @@ class BaseModel:
         return "[{:s}] ({:s}) {}".format(self.__class__.__name__, self.id,
                                          self.to_dict())
 
-    def save(self):
-        """updates the attribute 'updated_at' with the current datetime"""
+    def create(self):
+        """set object in all objects dictionary"""
+        models.storage.create(self)
+        
+    """def save(self):
+        ""updates the attribute 'updated_at' with the current datetime""
         self.updated_at = datetime.utcnow()
         models.storage.new(self)
-        models.storage.save()
+        models.storage.save()"""
 
     def to_dict(self, save_fs=None):
         """returns a dictionary containing all keys/values of the instance"""
@@ -70,10 +74,10 @@ class BaseModel:
             new_dict['password'] = "*" * len(new_dict['password'])
         if "_sa_instance_state" in new_dict:
             del new_dict["_sa_instance_state"]
-        """
+        
         if save_fs is None:
             if "password" in new_dict:
-                del new_dict["password"]"""
+                del new_dict["password"]
         return new_dict
 
     def delete(self):

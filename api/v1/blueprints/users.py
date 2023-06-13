@@ -22,9 +22,9 @@ def get_users():
 
 @app_views.route('/users/<string:id>', methods=['GET'])
 @swag_from('documentation/user/get_user.yml', methods=['GET'])
-def get_user(user_id):
+def get_user(id):
     """retrieving user"""
-    user = storage.get(User, user_id)
+    user = storage.get(User, id)
     if user:
         return jsonify(user.to_dict())
     else:

@@ -20,9 +20,9 @@ def get_datas():
 
 @app_views.route('/datas/<string:id>', methods=['GET'])
 @swag_from('documentation/date/get_id_user.yml', methods=['GET'])
-def get_data(data_id):
+def get_data(id):
     """retrieving data"""
-    data = storage.get(Data, data_id)
+    data = storage.get(Data, id)
     if data:
         return jsonify(data.to_dict())
     else:
