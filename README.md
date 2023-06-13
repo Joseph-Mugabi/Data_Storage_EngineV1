@@ -97,6 +97,6 @@ interface content from the client[FrontEnd]. The Storage engine without a schema
 schema and did the mapping of all data in SQLAlchemy. Since i needed a data layer of abstraction to that would handle a certain information
 or data to make it easy for the ```client(FrontEnd)``` to access the data storage engine.
 
-[www.jinsights.tech](wwww.jinsights.tech/landing_page.html)
+[www.jinsights.tech](www.jinsights.tech/landing_page.html)
 [linkedin](https://www.linkedin.com/pulse/am-happy-honored-share-you-my-complete-foundation-portfolio-joseph)
 [twitter](https://twitter.com/joseph_mugabi/status/1668571291639590913?s=20)
